@@ -2,6 +2,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 require 'sendvia'
 require 'vcr'
+Dir.glob("#{File.dirname(__FILE__)}/fixtures/*").each { |file| require(file) }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
