@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/alpha5/shipments/fa13db9f-1ee7-4d08-9e85-0cee3147cebc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer SCqf0zo9uRnWeSL46UnUo6xTRjXifdluS3yIf6ugI0b0GeokYMiKDng0vbkJtwZMGnWthTNjx_gtTIbPqm0i-s_Hf8JZSvizxlFyAW_CkLEHmL63e830U_b0byeYQh8FCa-04uE5cKlRBG59fT2Tmp4xG80QAMpg6YKGfW2edxUooy6VwxUuI0mBujiJu8RizJP-Y53g-TNbryMxl3xNsYoxpZj2jdHiwsgCGrPvQcYmO3_zmW9cjTFiJc2eZGGz
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 12 Feb 2015 12:50:59 GMT
+      Content-Length:
+      - '1334'
+    body:
+      encoding: UTF-8
+      string: '{"Id":"fa13db9f-1ee7-4d08-9e85-0cee3147cebc","Sender":{"Id":"4f038346-c461-40bd-8c5b-0d750b083e41","Address":{"Id":"aee47540-801a-4e09-addf-352a143f1006","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","BuildingName":null,"BoxNumber":null,"Street":null,"Locality":null,"City":null,"GoverningDistrict":null,"PostalArea":null,"Country":null,"CountryIso":826},"FirstName":"Werner","MiddleNames":null,"Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Recipient":{"Id":"f68c55c2-d91e-4e89-b566-23a6b1ad6341","Address":{"Id":"dcaf323d-ad2d-4331-90b5-ba6336d93753","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","BuildingName":null,"BoxNumber":null,"Street":null,"Locality":null,"City":null,"GoverningDistrict":null,"PostalArea":null,"Country":null,"CountryIso":826},"FirstName":"Werner","MiddleNames":null,"Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Parcels":[{"Id":"d9cfc39a-badb-44e2-ba9f-c5b18d578e0a","Reference":null,"Weight":819,"Size":{"Height":16,"Length":47,"Width":21},"CommodityCode":null,"Description":null,"Value":123.000,"Currency":826}],"Reference":null,"Collection":"2015-02-10T14:50:36","Instructions":null,"Insured":false,"Cancelled":null}'
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 12:50:59 GMT
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/alpha5/shipments/fa13db9f-1ee7-4d08-9e85-0cee3147cebc/alerts
+    body:
+      encoding: UTF-8
+      string: '{"Id":"50c2a2ef-800f-4758-9285-b0e72c70981e","Type":"Update","Date":"2015-02-12T12:50:59+00:00","Message":"Creating
+        an alert"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer SCqf0zo9uRnWeSL46UnUo6xTRjXifdluS3yIf6ugI0b0GeokYMiKDng0vbkJtwZMGnWthTNjx_gtTIbPqm0i-s_Hf8JZSvizxlFyAW_CkLEHmL63e830U_b0byeYQh8FCa-04uE5cKlRBG59fT2Tmp4xG80QAMpg6YKGfW2edxUooy6VwxUuI0mBujiJu8RizJP-Y53g-TNbryMxl3xNsYoxpZj2jdHiwsgCGrPvQcYmO3_zmW9cjTFiJc2eZGGz
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 12 Feb 2015 12:50:59 GMT
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 12:50:59 GMT
+recorded_with: VCR 2.9.3

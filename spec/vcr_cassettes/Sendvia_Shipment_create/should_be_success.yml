@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/alpha5/shipments
+    body:
+      encoding: UTF-8
+      string: '{"Id":"10aad263-1d57-48b8-b2cd-c703f83febf0","Sender":{"Id":"e8277b87-686e-48f5-a81a-e258e3898774","Address":{"Id":"3e389424-6ec0-4e7a-90e5-06634fb731e5","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","Country":"GB","CountryIso":826},"FirstName":"Werner","Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Recipient":{"Id":"1f44e069-83f0-4a62-841b-7dd92b66d984","Address":{"Id":"6327d7eb-2089-4dba-8d2e-bd1314ef5d6c","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","Country":"GB","CountryIso":826},"FirstName":"Werner","Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Parcels":[{"Id":"ed00a9ee-1d75-478c-b665-3c21d2883686","Weight":672,"Size":{"Height":11,"Length":42,"Width":11},"Value":123.0,"Currency":826}],"Collection":"2015-02-12T10:54:14+00:00","Insured":false}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer QuxfpDRbKSUGGHVu2FPw-tHypV-ZGbYQ8Pitwmk1uCowXwXrmWV4rAiB2UXDajSVguJKMcC5llhVcJ-2bH0jKfJH-ufOY00aOUMBqCRAQpWLwkYuXcw1bybHQdoKqGfheKlEkj_9ysHbdPw4Zlzk-7-0X-Gz8pIsHIUDeU2fOGnsBAi555rUSgFwKrzCa95qzTJR65EQVpiyBVLu9GfbT-vyyVo8zgBAgC73y28KA5XtNdd2nfwbtQgICINwWfo0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 12 Feb 2015 10:54:14 GMT
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 12 Feb 2015 10:54:15 GMT
+recorded_with: VCR 2.9.3
