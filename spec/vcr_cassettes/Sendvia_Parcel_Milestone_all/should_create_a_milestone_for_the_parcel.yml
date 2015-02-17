@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/alpha5/parcels/b1dca525-da08-452a-89ff-36a658c87fef/milestones
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer M2Gmsv0u4-OoUTtqiLioj8bgJM1_hfmESlDOr_YrX_Lwl_m8gL_61AKjmUBrcY4nOgHfik2u162Saj5bCcFFF7TInaNmpZsoNkBujj7Ush6drJgU6aBMcyQvlI39JWOObu9QOR2PlluR-oDcEhhKYL8soP8AkN6DYNlnUYDjZ7P8p_ZKk6R6m1YaBlOdytxyGxKePCR4Pg2NmpvTJacHy814k-F3OnYJQNfqYUtZ66ZW05VFuBTnwTHgCRTnKr6_
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 17 Feb 2015 09:41:40 GMT
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 17 Feb 2015 09:41:45 GMT
+recorded_with: VCR 2.9.3
