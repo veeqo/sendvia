@@ -3,7 +3,7 @@ module Sendvia
   class Shipment < Base
 
     def label
-      self.get(:label)
+      Base64.decode64 get(:label)
     end
 
     def self.labels shipment_ids
