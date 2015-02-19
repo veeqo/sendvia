@@ -1,12 +1,24 @@
 require 'spec_helper'
 
 describe Sendvia::Shipment, '#labels', vcr: 'shipment/labels' do
-  let!(:session) { Sendvia::Session.new("TEnn8RGUY0ySt-lulV-E_XVTnzUPuQ3oPM8Ow9o2YG4wZOaKzxgyNBUcUb0PcUT5A57SsxAdNVkpoQsswwjRW56_ee0eGezSvhCA38KPbhDm1ej5Tcu0LuEkrBnmvDfL9nnyM2ZwlbGFNC8b380_-BLNbrLcaQMaw7tTUo0tp2ZvXK_itcpp9Vw8lmuXa5IDUzpDu51fGihJc3um-ezb1H3SZ4KoXH9Ywij6NwKpr846j61srntvjk972dhYb32d", true) }
+  let!(:session) { Sendvia::Session.new("cpsamvqLFfaDGhWSq_G7dWk9QhtNcNZIjqRd94mQSTN3g_o-KIbwITJ_heR0hxWILtguaxhRPbzOAyeMxFE_wuXj09vdJh2zTqhCL2ymHov5P7e5dgu0854pOUge0HRWoW72WuzICjEBcGGiLDyU1PWIfw3YBe_iPIBCalSnbfHNeNEOKYSfOAW5KxmCa_FnxeStoj-i9opKZdY9RVNw_O1v4MuWyaq7yvmvUrWNYHEgQqIlFoLXrHt__QckjUUN", true) }
+  let(:pdf_reader) { PDF::Reader.new("labels.pdf") }
 
-  subject { SendVia::Shipment.labels }
 
-  it 'should return an array of pdfs' do
-    pending 'There are no current available services that have a label to get, need to contact SendVia about this'
-    raise #To allow spec to be pending
+  subject { Sendvia::Shipment.labels(['A4F1C0AF-EF7E-44B3-8771-2BC6FD270E6C', 'A4F1C0AF-EF7E-44B3-8771-2BC6FD270E6C']) }
+
+  def write_to_file
+    File.open('labels.pdf', 'wb') { |labels| labels.write subject }
+  end
+
+  after(:all) { File.delete('labels.pdf') }
+
+  it 'should return valid pdf data that can be saved as a pdf' do
+    expect { write_to_file }.not_to raise_error
+  end
+
+  it 'should produce the correct labels' do
+    expect(pdf_reader.page(1).text).to include("70 William Street")
+    expect(pdf_reader.page(2).text).to include("70 William Street")
   end
 end

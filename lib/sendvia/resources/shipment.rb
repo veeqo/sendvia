@@ -7,7 +7,8 @@ module Sendvia
     end
 
     def self.labels shipment_ids
-      get(:labels, ids: shipment_ids)
+      labels_response_body = post(:labels, {}, shipment_ids).body
+      Base64.decode64(ActiveSupport::JSON.decode(labels_response_body)["Data"])
     end
 
     def alerts
