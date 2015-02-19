@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/alpha5/markups
+    body:
+      encoding: UTF-8
+      string: '{"Id":"672a0af1-08e6-4172-b357-81041b148d23","Carrier":"deb6893f-c2a5-4be0-a20a-4c0c28d2065f","Service":"f679eada-b61f-4292-b17b-4d14853715c5","Route":"7a300f97-f160-4843-b0eb-81a5f7fbd6c0","Amount":1.0,"Currency":826}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 78XQ1n5fMB9g9fYIk2gQl7qxvJrm1HcpBM0bY3oLGEb93BUS8AsKeUSs2ZVjh92iA4h4C45kLrqX7Nav5Ao1jiXaB-X1IDUN29tHMERSfR1S4DpHmossCc5MX03EM1dloM2Voz_6JVCCZj0kedywYkPaRWYb89O5vCsoTf7f69ZXhtPJ2UBz-6wGfKsJMM0YopfrQ1jRAnPOjXVZi1GNOs_hkTrRA3QvSgpTXiYa0UYPJ9KpPjvvjUSOh53DWXCi
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 500
+      message: Unexpected Error
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '46'
+      Content-Type:
+      - text/plain; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Thu, 19 Feb 2015 09:46:04 GMT
+    body:
+      encoding: UTF-8
+      string: An unexpected error occurred, please try again
+    http_version: 
+  recorded_at: Thu, 19 Feb 2015 09:46:05 GMT
+recorded_with: VCR 2.9.3
