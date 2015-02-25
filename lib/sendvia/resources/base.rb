@@ -12,6 +12,7 @@ module Sendvia
 
     include Sendvia::ElementPath
     include Sendvia::CollectionPath
+    include Sendvia::Header
 
     def self.activate_session session
       self.session = session
