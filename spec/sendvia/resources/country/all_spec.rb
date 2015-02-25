@@ -8,7 +8,7 @@ describe Sendvia::Country, "#all", vcr: { cassette_name: 'countries/all' } do
   subject { Sendvia::Country.all }
 
   it 'should return country instances' do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it 'should contain valid country properties' do

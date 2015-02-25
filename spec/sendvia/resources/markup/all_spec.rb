@@ -8,6 +8,6 @@ describe Sendvia::Markup, "#all", vcr: { cassette_name: 'markup/all' } do
   subject { Sendvia::Markup.all }
 
   it "should return a collection a markups" do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 end

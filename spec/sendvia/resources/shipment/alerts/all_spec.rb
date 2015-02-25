@@ -9,6 +9,6 @@ describe Sendvia::Shipment, "#alerts#all", vcr: { cassette_name: 'shipments/aler
   subject { shipment.alerts }
 
   it 'should return a collection of alerts' do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 end

@@ -14,7 +14,7 @@ describe Sendvia::Carrier::Service::Route::Rate, "#all", vcr: { cassette_name: '
 
   it "should return a collection of rates" do
     pending 'Beta has no carriers available with routes to get rates from'
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it 'should contain correct rate information' do

@@ -9,7 +9,7 @@ describe Sendvia::Carrier, "#all" do
     subject { Sendvia::Carrier.all }
 
     it 'should return an instance of active resource collection' do
-      expect(subject.class).to eq(ActiveResource::Collection)
+      expect(subject.class).to eq(Array)
     end
 
     it 'should return a list of carriers' do
@@ -25,7 +25,7 @@ describe Sendvia::Carrier, "#all" do
     subject { Sendvia::Carrier.all(:params => { :include => "services" }) }
 
     it 'should return an instance of active resource collection' do
-      expect(subject.class).to eq(ActiveResource::Collection)
+      expect(subject.class).to eq(Array)
     end
 
     it 'should return a list of carriers' do

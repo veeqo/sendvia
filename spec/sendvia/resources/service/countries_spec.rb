@@ -9,7 +9,7 @@ describe Sendvia::Carrier::Service, "countries", vcr: { cassette_name: 'carrier_
   subject { service.countries }
 
   it 'should return country instances' do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it 'should contain valid country objects' do

@@ -9,7 +9,7 @@ describe Sendvia::Carrier::Service, '#all', vcr: { cassette_name: 'carrier_servi
   subject { carrier.services }
 
   it 'should return a relation of carrier services' do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it 'should return valid carrier services' do
