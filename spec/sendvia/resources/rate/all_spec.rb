@@ -13,7 +13,7 @@ describe Sendvia::Carrier::Service::Route::Rate, "#all", vcr: 'rate/all' do
 
 
   it "should return a collection of rates" do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it 'should contain correct rate information' do

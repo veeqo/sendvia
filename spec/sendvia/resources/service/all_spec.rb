@@ -7,7 +7,7 @@ describe Sendvia::Carrier::Service, '#all', vcr: 'carrier_services/all' do
   subject { carrier.services }
 
   it 'should return a relation of carrier services' do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it 'should return valid carrier services' do

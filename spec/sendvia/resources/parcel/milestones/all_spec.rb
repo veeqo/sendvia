@@ -7,6 +7,6 @@ describe Sendvia::Parcel::Milestone, "#all", vcr: 'parcels/milestones/all' do
   subject { Sendvia::Parcel::Milestone.all(params: { parcel_id: 'b1dca525-da08-452a-89ff-36a658c87fef' }) }
 
   it "should create a milestone for the parcel" do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 end

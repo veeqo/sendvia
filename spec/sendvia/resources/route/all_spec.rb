@@ -6,7 +6,7 @@ describe Sendvia::Carrier::Service::Route, "#all", vcr: 'routes/all' do
   subject { Sendvia::Carrier::Service::Route.all(params: { carrier_id: 'deb6893f-c2a5-4be0-a20a-4c0c28d2065f', service_id: '2657fa9b-2757-4826-9865-6610cf2bba41' }) }
 
   it "should return a collection of routes" do
-    expect(subject.class).to eq(ActiveResource::Collection)
+    expect(subject.class).to eq(Array)
   end
 
   it "should have valid properties of a route" do
