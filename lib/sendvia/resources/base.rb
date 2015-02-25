@@ -4,10 +4,14 @@ module Sendvia
     API_VERSION = 'beta'
     REST_API_ENDPOINT = "#{BASE_API_ENDPOINT}rest/#{API_VERSION}/"
 
+    class_attribute :include_format_in_path
     self.include_format_in_path = false
     self.include_root_in_json = false
     self.primary_key = :Id
     self.site = REST_API_ENDPOINT
+
+    include Sendvia::ElementPath
+    include Sendvia::CollectionPath
 
     def self.activate_session session
       self.session = session
