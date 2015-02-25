@@ -1,9 +1,13 @@
 module Sendvia
   class Base < ActiveResource::Base
+    class_attribute :include_format_in_path
     self.include_format_in_path = false
     self.primary_key = :Id
 
     REST_API_ENDPOINT = 'https://www.sendvia.co.uk/rest/alpha5/'
+
+    include Sendvia::ElementPath
+    include Sendvia::CollectionPath
 
     def self.activate_session session
       self.site = REST_API_ENDPOINT
