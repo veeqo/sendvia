@@ -8,10 +8,11 @@ module Sendvia
 
     include Sendvia::ElementPath
     include Sendvia::CollectionPath
+    include Sendvia::Header
 
     def self.activate_session session
       self.site = REST_API_ENDPOINT
-      self.headers.merge! 'authorization' => "Bearer #{session.access_token}"  #TODO consider thread safety
+      self.headers.merge! 'authorization' => "Bearer #{session.access_token}"
     end
 
     def self.clear_session!
