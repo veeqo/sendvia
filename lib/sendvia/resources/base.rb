@@ -50,5 +50,17 @@ module Sendvia
       option_string = options.to_query.gsub(/\%5B/, "[").gsub(/\%5D/, "]")
       "?#{option_string}" if options.present?
     end
+
+    def self.primary_key  #Backported from https://github.com/rails/activeresource/commit/265007e6148aa70f1f94a73f2f3cdcb8987b205a
+      if defined?(@primary_key)
+        @primary_key
+      elsif superclass != Object && superclass.primary_key
+        primary_key = superclass.primary_key
+      return primary_key if primary_key.is_a?(Symbol)
+        primary_key.dup.freeze
+      else
+        'id'
+      end
+    end
   end
 end
