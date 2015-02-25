@@ -25,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', "~> 1.20"
   spec.add_development_dependency 'pdf-reader'
 
-  spec.add_dependency 'activeresource', '~> 4.0'
+  spec.add_dependency 'activeresource', '3.2.19'
   spec.add_dependency 'oauth2', '>= 0.9.4'
 end
