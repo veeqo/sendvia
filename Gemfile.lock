@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sendvia (0.0.1)
+    sendvia (1.0.0)
       activeresource (~> 4.0)
 
 GEM
