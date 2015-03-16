@@ -1,6 +1,7 @@
 module Sendvia
   class Base < ActiveResource::Base
     self.include_format_in_path = false
+    self.include_root_in_json = false
     self.primary_key = :Id
 
     REST_API_ENDPOINT = 'https://www.sendvia.co.uk/rest/alpha5/'
@@ -18,7 +19,6 @@ module Sendvia
       self.new(attributes).tap do |resource|
         old_prefix_options = resource.prefix_options.dup
         resource.prefix_options = resource.prefix_options.merge(params)
-        puts resource.prefix_options.inspect
         resource.save
         resource.prefix_options = old_prefix_options
       end
