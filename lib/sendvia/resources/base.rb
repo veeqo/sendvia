@@ -30,5 +30,24 @@ module Sendvia
         'id'
       end
     end
+
+    def self.create_with_url_params(attributes = {}, params = {})
+      self.new(attributes).tap do |resource|
+        old_prefix_options = resource.prefix_options.dup
+        resource.prefix_options = resource.prefix_options.merge(params)
+        puts resource.prefix_options.inspect
+        resource.save
+        resource.prefix_options = old_prefix_options
+      end
+    end
+
+    private
+
+    def self.query_string(options)
+      option_string = options.to_query.gsub(/\%5B/, "[").gsub(/\%5D/, "]")
+      "?#{option_string}" unless options.nil? || options.empty?
+    end
   end
 end
+
+
