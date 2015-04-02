@@ -30,7 +30,7 @@ module Sendvia
 
     def self.query_string(options)
       option_string = options.to_query.gsub(/\%5B/, "[").gsub(/\%5D/, "]")
-      "?#{option_string}" unless options.nil? || options.empty?
+      "?#{option_string}" if options.present?
     end
   end
 end
