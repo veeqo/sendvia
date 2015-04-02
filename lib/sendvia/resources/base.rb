@@ -4,7 +4,9 @@ module Sendvia
     self.include_root_in_json = false
     self.primary_key = :Id
 
-    REST_API_ENDPOINT = 'https://www.sendvia.co.uk/rest/alpha5/'
+    BASE_API_ENDPOINT = 'https://www.sendvia.co.uk/'
+    API_VERSION = 'alpha5'
+    REST_API_ENDPOINT = "#{BASE_API_ENDPOINT}rest/#{API_VERSION}/"
 
     def self.activate_session session
       self.site = REST_API_ENDPOINT

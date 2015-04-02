@@ -2,10 +2,10 @@ require 'oauth2'
 
 module Sendvia
 
-  class Session
-    SITE = 'https://www.sendvia.co.uk'
-    TOKEN_URL = '/alpha5/token'
-    AUTH_URL = '/alpha5/account/authorize'
+  class Session < Base
+    OAUTH_URL = "#{BASE_API_ENDPOINT}#{API_VERSION}"
+    TOKEN_URL = 'token'
+    AUTH_URL = 'account/authorize'
 
     attr_accessor :client_id
     attr_accessor :client_secret
@@ -27,7 +27,7 @@ module Sendvia
     def get_token
       client = OAuth2::Client.new(self.client_id,
                                   self.client_secret,
-                                  site: SITE,
+                                  site: OAUTH_URL,
                                   token_url: TOKEN_URL,
                                   authorize_url: AUTH_URL)
       client.client_credentials.get_token.token
