@@ -11,17 +11,18 @@ describe Sendvia::Session, "#new" do
     end
   }
 
-  context 'when activate session is false'
+  context 'when activate session is false' do
     let(:activate_session) { false }
 
-  it 'should not request a new access token and add it to the headers' do
-    expect(subject.access_token).to be_nil
-  end
+    it 'should not request a new access token and add it to the headers' do
+      expect(subject.access_token).to be_nil
+    end
 
-  it 'should not call activate_session method on Sendvia::Base' do
-    expect(Sendvia::Base).to_not receive(:activate_session)
+    it 'should not call activate_session method on Sendvia::Base' do
+      expect(Sendvia::Base).to_not receive(:activate_session)
 
-    subject
+      subject
+    end
   end
 
   context 'when activate session is true' do
