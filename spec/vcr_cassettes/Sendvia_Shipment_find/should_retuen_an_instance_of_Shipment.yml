@@ -1,8 +1,49 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 14:34:20 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"cMTCas_y2imUQcRg9tmvRnMYbZ2b_0mDtlcVKYfPyyCxtVIhgrshH6P7rC0IstE8ogKDQ0g_Rlhu7bnhZwxAAPDvRb2JpNUC54aQ23AHjqvRj44WC4by9cLfL_GIPzB6OYLR_g5xWqV6scu2QH91RgGvBrBDMsZGxOCZB0WLdJCq2CqmYTLuaV1OK4QFdpWyr5PedkJd4uVeQDSATQ3V4i1ckopMzR6w8TrHvcz_iA6RGROhXE4APlkasfDcEC9P","token_type":"bearer","expires_in":3599,"refresh_token":"DhXF2Lxjl3bDBKahKoHIEr-UGnOUUhZkxSYC7MqnhpsePWGE7A0Z0ViHJbHSyQqYu6EgPXfX9pCxuDy4yt8TPOQAD7SGdB_qtAwDkIIlXCgCHXjq8OZXkSqNPSWyk2QM-vXnvNTWrv0yC8raF78SBBV6Mn_DJLpk7LwWbcyWbn6Fav1ZIjWdRBD4fQkfRWiVKkIqktsrv7UG4kE9lArBudpC5D-hUpEeFwzkLozlZJI8qHGEsfQLTrxwHoLg-jy2tal8z6FTLUCqviI3jGdOiQ"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 14:34:21 GMT
+- request:
     method: get
-    uri: https://www.sendvia.co.uk/rest/alpha5/shipments/fa13db9f-1ee7-4d08-9e85-0cee3147cebc
+    uri: https://www.sendvia.co.uk/rest/beta/shipments/e97c841a-2cdc-48be-b70d-1b8754181e3c
     body:
       encoding: US-ASCII
       string: ''
@@ -10,7 +51,7 @@ http_interactions:
       Accept:
       - application/json
       Authorization:
-      - Bearer wgtkZTNkXCKzJwFTqSrSKXL4ba4PVZWnm4dbLtogos-9_zIDw-12guEH_jrfHz9Skd6W8WTPet61P3_CNS-bqonrgkUMWU-ZPczuf8hdNWLJ0TQchJcn6L8hU5i69ObTP04JSkDm5xlK-6tSICc6-DVf7F1I_kT1_FreUkqklXnMGoxfTwYOWZBgoGVWPMRAGdj3jkzDIM_HvZCZAyA2BIhKz__XIURqCi0awAfWUSEFaYrLXbFGq6r2D5P3CYuI
+      - Bearer n85wSxYmHbYi9nfvj_4Sd9V2is-Vfj9C3aC7X9ntZ8gky6H-Mkh2187JLVSeQBsuMuZewvZTsPM9RAsk0CCK9SfsodRdL50HvM_ipcA6vXSYeq6993JGmK1xp4Ix7GAHuhEzZvt3SMNOkh4kgXL8uN5MNohGfmld7YKVECcYqo0ax-H9MWASyhbAFzJ6XV22GyZihGbIanhSpysXQH5suNJPM6Kyhw6bjKdNE_F0KKk59pydw2cIC6iwTcPzilze
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       User-Agent:
@@ -35,12 +76,14 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Thu, 12 Feb 2015 10:21:37 GMT
+      - Wed, 08 Apr 2015 14:34:20 GMT
       Content-Length:
-      - '1334'
+      - '1376'
     body:
       encoding: UTF-8
-      string: '{"Id":"fa13db9f-1ee7-4d08-9e85-0cee3147cebc","Sender":{"Id":"4f038346-c461-40bd-8c5b-0d750b083e41","Address":{"Id":"aee47540-801a-4e09-addf-352a143f1006","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","BuildingName":null,"BoxNumber":null,"Street":null,"Locality":null,"City":null,"GoverningDistrict":null,"PostalArea":null,"Country":null,"CountryIso":826},"FirstName":"Werner","MiddleNames":null,"Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Recipient":{"Id":"f68c55c2-d91e-4e89-b566-23a6b1ad6341","Address":{"Id":"dcaf323d-ad2d-4331-90b5-ba6336d93753","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","BuildingName":null,"BoxNumber":null,"Street":null,"Locality":null,"City":null,"GoverningDistrict":null,"PostalArea":null,"Country":null,"CountryIso":826},"FirstName":"Werner","MiddleNames":null,"Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Parcels":[{"Id":"d9cfc39a-badb-44e2-ba9f-c5b18d578e0a","Reference":null,"Weight":819,"Size":{"Height":16,"Length":47,"Width":21},"CommodityCode":null,"Description":null,"Value":123.000,"Currency":826}],"Reference":null,"Collection":"2015-02-10T14:50:36","Instructions":null,"Insured":false,"Cancelled":null}'
+      string: '{"Id":"e97c841a-2cdc-48be-b70d-1b8754181e3c","Sender":{"Id":"bc50cd8d-7c13-4c6c-aa2e-b5c85ae2deb2","Address":{"Id":"0fcebeb1-f353-49f7-b4d4-dcb3a10b58e8","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","BuildingName":null,"BoxNumber":null,"Street":null,"Locality":null,"City":"Albuquerque","GoverningDistrict":null,"PostalArea":"SA1
+        1DP","Country":null,"CountryIso":826},"FirstName":"Werner","MiddleNames":null,"Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Recipient":{"Id":"20a0d479-0160-45ce-a98b-813f098c050f","Address":{"Id":"6ebe2b37-d7dc-4f7f-846b-1467617a1542","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","BuildingName":null,"BoxNumber":null,"Street":null,"Locality":null,"City":"Albuquerque","GoverningDistrict":null,"PostalArea":"SA1
+        1DP","Country":null,"CountryIso":826},"FirstName":"Werner","MiddleNames":null,"Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Parcels":[{"Id":"e670dd8e-9141-43c2-a61e-f0cb17178a2b","Reference":null,"Weight":357,"Size":{"Height":7,"Length":13,"Width":36},"CommodityCode":null,"Description":null,"Value":123.000,"Currency":826}],"Reference":null,"Collection":"2015-04-08T14:01:26","Instructions":null,"Insured":false,"Cancelled":null,"Sandbox":true}'
     http_version: 
-  recorded_at: Thu, 12 Feb 2015 10:21:37 GMT
+  recorded_at: Wed, 08 Apr 2015 14:34:21 GMT
 recorded_with: VCR 2.9.3

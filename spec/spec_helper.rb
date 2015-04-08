@@ -5,6 +5,7 @@ require 'vcr'
 require 'pdf-reader'
 
 Dir.glob("#{File.dirname(__FILE__)}/fixtures/*").each { |file| require(file) }
+Dir.glob("#{File.dirname(__FILE__)}/helpers/*").each { |file| require(file) }
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Tue, 07 Apr 2015 14:22:01 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"Y111_ALDC0FiEoAWwD2_4qy35wkP--_gWh4eG5hvPiwTf6QISwlKCZv0JLgXNjh5kWYSHAe9wQ5bLF8Cgx60JTjO8NZcuUk7uG5La1Ww0RGkg4YuQDKbRGbkNDPcnUQeDZ_PkwP58smhowTwIkyhS4eFPaVxbNItDocNIfRCc4t03TDFbcQBrUNEV9X5Q_ZGkBc7Er8Tcu1XpLFOpcfZ5LOoGgnVox7UcIykF0lHnAXGNUhkSGBHuSBKuLRcnkjO","token_type":"bearer","expires_in":3599,"refresh_token":"4unkNvOCdX3DW-mfK5c_5cblvOxdN3sCPMyuniJnhrnzySwzMa7ogX92Q0za-hoDnZu5pvAt5SgkYDUg3qSdiv4KbrnPBbc_G7ZZaGPbE7LNvB9N2-OZUH-WGTa3MhQWa1_iho3JtfYrOYxU44r_ZZPMto69z39UjY8FqV1Uv632ywYjO2XJQ7btdt9KrCUQQaaCRiE8G7FZNYHJYU48VV0BP5aYqa3HOxpO2LqRyDZdCkHYBvHdlpPbotKpTUxPVRYFpIhC7AAUMBmHYet5tQ"}'
+    http_version:
+  recorded_at: Tue, 07 Apr 2015 14:22:01 GMT
+recorded_with: VCR 2.9.3

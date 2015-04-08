@@ -1,0 +1,95 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:48:17 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"cpMIpDccar0gFfOXTIqs68sxeCzLY8HkP40dqG9M9WHzfTBIB2iRmVHdi7T_7QVS1ovEYThIizqnxnmWPjq6giDs-4dJCSl43DVosDZJ8bGPJLWxPFUmHtA5ewHjFsPKcHOoGZJEl8k4DCSRVkVjF5TNkoQdZ2sG35hJ_YrHKAek4HILLaCHWzWEBN-WG3wiLaBUKKAOd5iJlSgWbXNC-bh1AKjffy2dxVcrWKJGOHwS8w_sU6meAYotfjM2gF-K","token_type":"bearer","expires_in":3599,"refresh_token":"-1CbyyVeftgOgdoPwL9mhICmNfXWOODIVE-fgIxfySKOzTokxC4i-7Cs7E2QLe9YWx9Y5ARkHOmoM6KTyAUxwliST9yAYc4lY-9GAXNVizJyFsHmNHtMW4DeF6rS3jjg4psxjE0DhJBAq5cgIO0TgjXC1xrUrX8dTLJ-bYe-_LK_EyiGEygJDMeENOyPw53labGPzS4Lkx2cnSitWXFstn59CSKGNtGGRIwIkJeE47APB984pPyCVycoCmV1BtKssRT2Uvxe5qkIJA9_MrZI6A"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:48:18 GMT
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/beta/quotes/60f59144-c76f-4640-9e0a-9b24c2e34892
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer cpMIpDccar0gFfOXTIqs68sxeCzLY8HkP40dqG9M9WHzfTBIB2iRmVHdi7T_7QVS1ovEYThIizqnxnmWPjq6giDs-4dJCSl43DVosDZJ8bGPJLWxPFUmHtA5ewHjFsPKcHOoGZJEl8k4DCSRVkVjF5TNkoQdZ2sG35hJ_YrHKAek4HILLaCHWzWEBN-WG3wiLaBUKKAOd5iJlSgWbXNC-bh1AKjffy2dxVcrWKJGOHwS8w_sU6meAYotfjM2gF-K
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:48:17 GMT
+      Content-Length:
+      - '2059'
+    body:
+      encoding: UTF-8
+      string: '{"Id":"60f59144-c76f-4640-9e0a-9b24c2e34892","QueryId":"10564051-9593-4d3b-80d5-913a6266e438","Currency":826,"QuoteShipments":[{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":22.380,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"20490977-9ddd-4de3-8aa7-a490a2268563","Name":"Express","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express","Information":"Express","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true},{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":41.400,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"1f478ff2-15f6-4c13-9711-644fc26c362b","Name":"Express
+        Plus","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express
+        Plus","Information":"Express Plus","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true},{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":9.230,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"9529f28a-b75c-4a24-8a73-650986b5d7c6","Name":"Standard","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Standard","Information":"Standard","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true},{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":21.500,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"bfd47c5a-79e1-4a3b-b5c0-798ff215dbdc","Name":"Express
+        Saver","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express
+        Saver","Information":"Express Saver","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true}]}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:48:19 GMT
+recorded_with: VCR 2.9.3

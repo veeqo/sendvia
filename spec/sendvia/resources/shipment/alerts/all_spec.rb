@@ -1,8 +1,10 @@
 require 'spec_helper'
 
-describe Sendvia::Shipment, "#alerts#all", vcr: 'shipments/alerts' do
-  let!(:session) { Sendvia::Session.new("SCqf0zo9uRnWeSL46UnUo6xTRjXifdluS3yIf6ugI0b0GeokYMiKDng0vbkJtwZMGnWthTNjx_gtTIbPqm0i-s_Hf8JZSvizxlFyAW_CkLEHmL63e830U_b0byeYQh8FCa-04uE5cKlRBG59fT2Tmp4xG80QAMpg6YKGfW2edxUooy6VwxUuI0mBujiJu8RizJP-Y53g-TNbryMxl3xNsYoxpZj2jdHiwsgCGrPvQcYmO3_zmW9cjTFiJc2eZGGz", true) }
-  let(:shipment) { Sendvia::Shipment.find 'fa13db9f-1ee7-4d08-9e85-0cee3147cebc' }
+describe Sendvia::Shipment, "#alerts#all", vcr: { cassette_name: 'shipments/alerts' } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
+  let(:shipment) { Sendvia::Shipment.find 'e97c841a-2cdc-48be-b70d-1b8754181e3c' }
 
   subject { shipment.alerts }
 

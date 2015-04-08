@@ -1,8 +1,10 @@
 require 'spec_helper'
 
-describe Sendvia::Carrier::Service, '#all', vcr: 'carrier_services/all' do
-  let!(:session) { Sendvia::Session.new("d_AZFVtWxHrssswxzVlPm76JoNvgqyh9chPavWs2cJW3b7sBYD2IdMDhXDvq4OUSs03weHkE3ojfKyXoGYRMeU4DgH_1AVksWGMS1_6qkJwRyjWbEo1n28uuoBWWtgg8tiLPsRI57s7-n5uIKub0ST665qtsvxQMw0_Aagf2Yw4mr5jG1tD1Wnz0RXSHOHPI-WVHcVkoXQPb5QaOWDpT-MqiRfKCkpw83XnRfjx2oqvKTl-oyH5p9kTS8HY0_XHG", true) }
-  let!(:carrier) { Sendvia::Carrier.find("de306a53-25c5-48b6-a722-e71a38afbf95") }
+describe Sendvia::Carrier::Service, '#all', vcr: { cassette_name: 'carrier_services/all' } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
+  let!(:carrier) { Sendvia::Carrier.find("d5ec66cb-eb1d-476c-9e3d-44cf6738d154") }
 
   subject { carrier.services }
 
@@ -11,6 +13,6 @@ describe Sendvia::Carrier::Service, '#all', vcr: 'carrier_services/all' do
   end
 
   it 'should return valid carrier services' do
-    expect(subject.map(&:Name)).to match_array(["Courier", "Parcelshop"])
+    expect(subject.map(&:Name)).to match_array(["Express", "Express Plus", "Express Saver", "Standard"])
   end
 end 

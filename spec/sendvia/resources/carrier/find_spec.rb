@@ -1,8 +1,10 @@
 require 'spec_helper'
 
-describe Sendvia::Carrier, "#find", vcr: '/carriers/find' do
-  let!(:session) { Sendvia::Session.new("hufaVakyrZ2z9N0NLOe5cxHfM-aHgM2Wt4QGk2FOOm3FchYCzhXBgkOFV29nY9H7TDMsSCdswu0144cN64G1KQ7F8Nwk3gczaihKQDYGZ9KHvT3cGzGnDWI8zCSQ3y-gCR87LpwDsBrR24YlQKXUmpBKYAlbeIJDp-R0nWa7Elp8ce_z65WViUBa9AUT-qWWIJz5tGtCFFgl2Qys2ILWEAI_vybSbUSriQmU1wAPu45zKDL3_3rRvr-GRlEMq2OO", true) }
-  let(:carrier_id) { "deb6893f-c2a5-4be0-a20a-4c0c28d2065f" }
+describe Sendvia::Carrier, "#find", vcr: { cassette_name: '/carriers/find' } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
+  let(:carrier_id) { "c16d9f5a-55f0-4c9f-b8ae-9b23cc766423" }
 
   context 'when there are no additional parameters' do
     subject { Sendvia::Carrier.find(carrier_id) }
@@ -12,7 +14,7 @@ describe Sendvia::Carrier, "#find", vcr: '/carriers/find' do
     end
 
     it 'should have the carrier attributes' do
-      expect(subject.attributes).to eq({"Id"=>"deb6893f-c2a5-4be0-a20a-4c0c28d2065f", "Name"=>"Yodel", "Private"=>false, "Editable"=>false, "Services"=>nil})
+      expect(subject.attributes).to eq({"Id"=>"c16d9f5a-55f0-4c9f-b8ae-9b23cc766423", "Name"=>"MY NEW CARRIER", "Private"=>true, "Editable"=>true, "Services"=>nil})
     end
   end
 end

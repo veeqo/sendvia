@@ -1,4 +1,5 @@
 require "active_resource"
+require 'oauth2'
 require "sendvia/resources"
 require "sendvia/session"
 

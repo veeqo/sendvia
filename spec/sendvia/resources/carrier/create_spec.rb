@@ -1,14 +1,16 @@
 require 'spec_helper'
 
-describe Sendvia::Carrier, "#create", vcr: "carriers/create" do
-  let!(:session) { Sendvia::Session.new("OE7x-0ILBBpV0SJ-1N8HKDTWDDIvHeWs2DPGIn7Nem9R0-t0N0FHGv7vwxKcp1qEZOtCs7DufpJPAgWGCAfNQkA3jGFxCnDZbkMSuutFKSi3iJ7v1ewC8Ph-c12HPen0x2CXyRqXNLxIUHO3M6m1h5IJScMOfJQvd-sIRRUB9zolhwWCu4RtRMBF6SLIRNhwfmc0wCx1rGsE-i2aoYgkkVm-C_wrBXkDtKqqupsmzqp9I1kwGE305LxrNK8uzZSz", true) }
+describe Sendvia::Carrier, "#create" do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
 
   subject { Sendvia::Carrier.create carrier_attributes }
 
-  context 'when created with valid parameters' do
+  context 'when created with valid parameters', vcr: { cassette_name: "carriers/create_successful" } do
     let(:carrier_attributes) do
       {
-        Id: 'TYGHGHGYHHJ565757657',
+        Id: SecureRandom.uuid,
         Name: 'MY NEW CARRIER',
         Private: false,
         Editable: true
@@ -20,7 +22,7 @@ describe Sendvia::Carrier, "#create", vcr: "carriers/create" do
     end
   end
 
-  context 'when created with invalid parameters' do
+  context 'when created with invalid parameters', vcr: { cassette_name: "carriers/create_unsuccessful" } do
     let(:carrier_attributes) { { nonsense: 'true' } }
 
     it 'should not be successful' do

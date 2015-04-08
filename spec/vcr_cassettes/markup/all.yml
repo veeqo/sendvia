@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:16:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"-mYTdi7qIxTgS7D_E4ujpZ1hWWAqhrGVolg3To3lmu3VU0Knb3RgWcblEl387TXAV527zGRhiVKUE_CicAQVYyS9xeUl9gfECayIhenrXmoX5VpOYBiTeCeNqUknhDHIKEURv-uhPjSG4KXGqSN3gXVIehbpi6TzPQJeVyObOs9aIj-qYBhJtZ94BLvvUd0-KTBMKHrHema532MWUOoAC1R1v64Zj4U67AWXFOJZNyAflMfJDa5xthO71Hlnh57q","token_type":"bearer","expires_in":3599,"refresh_token":"c4p5k8wdZdl0SGttAIWPl9jb9AATeYJH6As2jm5pcMGsSguzCqVMxJbPyuvH55NFZUjRUMila5kjnzsGm584oFUq3pnuPG2ndGPskj27XA_0uXUqUu8yJ8McWUkHEKwU3GlGHYYUFK_xcIn2pm9d1JBRo_ZQlrVhmIvMn-rGzCXUGiYCn4QFa7v_v1NrdfX4lifShjhnLFUuqZg2lhC8JYwjMYnprkD_4riAIdePpFomqpwuq2WgiC-iDS6Qam2RJCyV0TcQhGX1K1VvQlnGRw"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:16:40 GMT
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/beta/markups
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer -mYTdi7qIxTgS7D_E4ujpZ1hWWAqhrGVolg3To3lmu3VU0Knb3RgWcblEl387TXAV527zGRhiVKUE_CicAQVYyS9xeUl9gfECayIhenrXmoX5VpOYBiTeCeNqUknhDHIKEURv-uhPjSG4KXGqSN3gXVIehbpi6TzPQJeVyObOs9aIj-qYBhJtZ94BLvvUd0-KTBMKHrHema532MWUOoAC1R1v64Zj4U67AWXFOJZNyAflMfJDa5xthO71Hlnh57q
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:16:39 GMT
+      Content-Length:
+      - '95'
+    body:
+      encoding: UTF-8
+      string: '[{"Id":"ab82fcd2-ffe9-47a6-bcc8-45649cb46ae8","Decimal":null,"Amount":1.00000,"Currency":null}]'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:16:40 GMT
+recorded_with: VCR 2.9.3

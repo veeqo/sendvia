@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.sendvia.co.uk/rest/alpha5/carriers
+    uri: https://www.sendvia.co.uk/rest/beta/carriers
     body:
       encoding: UTF-8
-      string: '{"Editable":true,"Id":"TYGHGHGYHHJ565757657","Name":"MY NEW CARRIER","Private":false}'
+      string: '{"Id":"TYGHGHGYHHJ565757657","Name":"MY NEW CARRIER","Private":false,"Editable":true}'
     headers:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer mFPZQZjbKjebZHA_GtX88bcHq1-qCgFTpSYCC2QEbri6cLzeOraK_ylATg79KQoA5zh6wkJqZmG8p1p7cThU9Bxf2hxqGxyn8bAHtQrR_djoMqHMlcuyCZC2IBnmvPi3c3sgoj4BRXXRYMEt8EODlz6PwoKFjeL3nZBEO8UWPOW5ntF0IBQWbypLPokXA47Pr-Oiu4Yp2ztXKsvMYI0VXmQQAzdE_O6BhJ8E1y94ez0lrT3fHAD_eWPCcHJS4OK1
+      - Bearer Y111_ALDC0FiEoAWwD2_4qy35wkP--_gWh4eG5hvPiwTf6QISwlKCZv0JLgXNjh5kWYSHAe9wQ5bLF8Cgx60JTjO8NZcuUk7uG5La1Ww0RGkg4YuQDKbRGbkNDPcnUQeDZ_PkwP58smhowTwIkyhS4eFPaVxbNItDocNIfRCc4t03TDFbcQBrUNEV9X5Q_ZGkBc7Er8Tcu1XpLFOpcfZ5LOoGgnVox7UcIykF0lHnAXGNUhkSGBHuSBKuLRcnkjO
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,13 +19,15 @@ http_interactions:
       - Ruby
   response:
     status:
-      code: 200
-      message: OK
+      code: 401
+      message: Unauthorized
     headers:
       Cache-Control:
       - no-cache
       Pragma:
       - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
       Expires:
       - "-1"
       Server:
@@ -35,12 +37,12 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Mon, 16 Mar 2015 15:03:52 GMT
+      - Wed, 08 Apr 2015 15:22:56 GMT
       Content-Length:
-      - '0'
+      - '61'
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"Message":"Authorization has been denied for this request."}'
     http_version: 
-  recorded_at: Mon, 16 Mar 2015 15:04:07 GMT
+  recorded_at: Wed, 08 Apr 2015 15:22:57 GMT
 recorded_with: VCR 2.9.3

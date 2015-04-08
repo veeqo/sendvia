@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 15:22:56 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"SrKuhdNRaiP5Km7_T4l6fyQtqcCeMv_mvRokLsFqLS3e0YlvHrSnXqxF2eEW8Hswuvf4wvZiwXdWh3owccBcBlOf1VDgfvOZ2HcJuej4N3a4VUspjvUo1fEzyvnY5gPj7-gS_KEGaRYhoKPLA6iAt_RMI6GzNsezn_ZwgkD7nPboDYSwWg3yQwmPo80v37-u4JVgNS407-GaK36BXR1X6NKpJ_nCrqTcLUm4lICOqgtZxXGquKWdfobpOxT6J9PH","token_type":"bearer","expires_in":3599,"refresh_token":"yCOIBhwydrZaRrEsuJfXsrsSK17bbjyiGIv7WaR-XYLItYxxZB3Cy7pI4y4mpB0nR1FICLO3mfGSWat4GMa7eMtrX19szqs5mMHaEHRfWbQMxeNyyGYH4T6PVUXW98PbT4Ufa0xgR71IGI_hiQHdWkqyAXeuNGwLtx0_1zcWJv70KzO6r0bvHT4JUVCwppRYX_CQaorV2lIbxkMuFzmhFrWrLcOO8aH8ynvrvURXAqmzoHTFHMCZYatX5myYiqXBr4iD2m1YDHGwZoyNgy0eHw"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 15:22:58 GMT
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/beta/markups
+    body:
+      encoding: UTF-8
+      string: '{"Id":"82ee6ddb-cd0c-41a9-a58f-f8389e1f6f0c","Carrier":"deb6893f-c2a5-4be0-a20a-4c0c28d2065f","Service":"f679eada-b61f-4292-b17b-4d14853715c5","Route":"7a300f97-f160-4843-b0eb-81a5f7fbd6c0","Amount":1.0,"Currency":826}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer -mYTdi7qIxTgS7D_E4ujpZ1hWWAqhrGVolg3To3lmu3VU0Knb3RgWcblEl387TXAV527zGRhiVKUE_CicAQVYyS9xeUl9gfECayIhenrXmoX5VpOYBiTeCeNqUknhDHIKEURv-uhPjSG4KXGqSN3gXVIehbpi6TzPQJeVyObOs9aIj-qYBhJtZ94BLvvUd0-KTBMKHrHema532MWUOoAC1R1v64Zj4U67AWXFOJZNyAflMfJDa5xthO71Hlnh57q
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 15:22:56 GMT
+      Content-Length:
+      - '61'
+    body:
+      encoding: UTF-8
+      string: '{"Message":"Authorization has been denied for this request."}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 15:22:58 GMT
+recorded_with: VCR 2.9.3

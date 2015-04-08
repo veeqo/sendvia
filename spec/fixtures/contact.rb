@@ -27,5 +27,7 @@ def example_address(options = {})
     StreetNumber: "1",
     Country: "GB",
     CountryIso: 826,
+    City: 'Albuquerque',
+    PostalArea: 'SA1 1DP'
   }.merge! options
 end

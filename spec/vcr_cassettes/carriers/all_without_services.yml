@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 12:56:01 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"AJ06CaULIuFUUO6GNFOA1u0sbiRKTAsQHdZbrO273MwmY-yTaM5-OelxgPQl3tqGTYlByRQLzALXylbZWf8L7XXv0zPx1e-iYm2c_7SRpyFP_MNxP-wysMOTJ8b8hg957tQasfqFEHYVogmSCZAwggwnK_hRq9uiwHSzjKKiFbbqRep47R9hYpYgjjR6Qn5TZqVO2j7w7V2sBqKcKH0NHhSrzvjuE0SQAr0mqjIPkdbgcfsix5epIL8OpZ6L_UWt","token_type":"bearer","expires_in":3599,"refresh_token":"oTp4H1Gs_YEq85QSwae5nNfBwV6aqvJ_EHXdXjNGVLzWWVDj4_rJlEDmyR6WRXcw5aHsLNlcJgGKIfhDrw5QU48Z6srggNwKnIbmWgMwyhnFjGmvM6drMxQQ5-wzDt4brgxUKkAdeyZug1ndAjd_6Pt2qi6Np0HiBj1AfXdX8mvIes1F8ZnMrHQH8B2PGE_dTwbookz6XswKJdKrHkjT-Y5DLlXcY3UC7UrrbO2Hq-vmGPHNdKgkfi6XoDMIhkX20zDhYFyOU100EZyKI96juQ"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 12:56:02 GMT
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/beta/carriers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer AJ06CaULIuFUUO6GNFOA1u0sbiRKTAsQHdZbrO273MwmY-yTaM5-OelxgPQl3tqGTYlByRQLzALXylbZWf8L7XXv0zPx1e-iYm2c_7SRpyFP_MNxP-wysMOTJ8b8hg957tQasfqFEHYVogmSCZAwggwnK_hRq9uiwHSzjKKiFbbqRep47R9hYpYgjjR6Qn5TZqVO2j7w7V2sBqKcKH0NHhSrzvjuE0SQAr0mqjIPkdbgcfsix5epIL8OpZ6L_UWt
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 12:56:01 GMT
+      Content-Length:
+      - '703'
+    body:
+      encoding: UTF-8
+      string: '[{"Id":"307a87a9-6cf2-4ba6-a59f-099babc020d5","Name":"MY NEW CARRIER","Private":true,"Editable":true,"Services":null},{"Id":"504c114a-0f57-489a-8e15-3f092122754f","Name":"MY
+        NEW CARRIER","Private":true,"Editable":true,"Services":null},{"Id":"3ce5ed17-1d44-46f5-8eb1-3fddf373783d","Name":"MY
+        NEW CARRIER","Private":true,"Editable":true,"Services":null},{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},{"Id":"c16d9f5a-55f0-4c9f-b8ae-9b23cc766423","Name":"My
+        Updated Carrier","Private":true,"Editable":true,"Services":null},{"Id":"4fe66c47-7cfc-4e25-a739-d740243cb0f2","Name":"MY
+        NEW CARRIER","Private":true,"Editable":true,"Services":null}]'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 12:56:03 GMT
+recorded_with: VCR 2.9.3

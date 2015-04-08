@@ -1,5 +1,3 @@
-require 'oauth2'
-
 module Sendvia
 
   class Session < Base

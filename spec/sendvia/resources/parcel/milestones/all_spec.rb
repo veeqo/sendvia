@@ -1,10 +1,11 @@
 require 'spec_helper'
 
-describe Sendvia::Parcel::Milestone, "#all", vcr: 'parcels/milestones/all' do
+describe Sendvia::Parcel::Milestone, "#all", vcr: { cassette_name: 'parcels/milestones/all' } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
 
-  let!(:session) { Sendvia::Session.new("M2Gmsv0u4-OoUTtqiLioj8bgJM1_hfmESlDOr_YrX_Lwl_m8gL_61AKjmUBrcY4nOgHfik2u162Saj5bCcFFF7TInaNmpZsoNkBujj7Ush6drJgU6aBMcyQvlI39JWOObu9QOR2PlluR-oDcEhhKYL8soP8AkN6DYNlnUYDjZ7P8p_ZKk6R6m1YaBlOdytxyGxKePCR4Pg2NmpvTJacHy814k-F3OnYJQNfqYUtZ66ZW05VFuBTnwTHgCRTnKr6_", true) }
-
-  subject { Sendvia::Parcel::Milestone.all(params: { parcel_id: 'b1dca525-da08-452a-89ff-36a658c87fef' }) }
+  subject { Sendvia::Parcel::Milestone.all(params: { parcel_id: 'e670dd8e-9141-43c2-a61e-f0cb17178a2b' }) }
 
   it "should create a milestone for the parcel" do
     expect(subject.class).to eq(ActiveResource::Collection)

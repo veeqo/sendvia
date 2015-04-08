@@ -6,5 +6,6 @@ def example_shipment_hash(options = {})
     Parcels: example_parcels,
     Collection: DateTime.now.to_s,
     Insured: false,
+    Sandbox: true
   }.merge! options
 end

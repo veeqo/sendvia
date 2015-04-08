@@ -1,15 +1,11 @@
 require 'spec_helper'
 
-describe Sendvia::Session, "#new" do
+describe Sendvia::Session, "#new", vcr: { cassette_name: 'session/new' } do
 
   let(:client_id) { 'CLIENT_ID' }
   let(:client_secret) { 'CLIENT_SECRET' }
-  let(:access_token) { 'P1TF-iMBXSgdDhCFtEDRRVdf-xRTatkXFiOLG0t2gMIIgyWY3B64bVQIILndkaNjN8cnj3XN7648khjcrpH4ZJvw-IeQVvwbkitm3YL9ItxnlZVIwNg8MNeORJ4yMIOJepyQNHOOjcu8jYPFuKedNuQI-ldcNkMWrltYK6inuFfx4DAC2IeP_XTf4Y7OspwC3JPwrrtNl1_TPsLWS4LxMecwwfnlMdh8VUmLjsxQ-O6Mnd1fzakYnGBSRLFnCh3f' }
-  subject {
-    VCR.use_cassette("Sendvia_Session/get_oauth_token") do
-      Sendvia::Session.new(client_id, client_secret, activate_session)
-    end
-  }
+  let(:access_token) { 'Y111_ALDC0FiEoAWwD2_4qy35wkP--_gWh4eG5hvPiwTf6QISwlKCZv0JLgXNjh5kWYSHAe9wQ5bLF8Cgx60JTjO8NZcuUk7uG5La1Ww0RGkg4YuQDKbRGbkNDPcnUQeDZ_PkwP58smhowTwIkyhS4eFPaVxbNItDocNIfRCc4t03TDFbcQBrUNEV9X5Q_ZGkBc7Er8Tcu1XpLFOpcfZ5LOoGgnVox7UcIykF0lHnAXGNUhkSGBHuSBKuLRcnkjO' }
+  subject { Sendvia::Session.new(client_id, client_secret, activate_session) }
 
   context 'when activate session is false' do
     let(:activate_session) { false }

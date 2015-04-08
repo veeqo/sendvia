@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:03:50 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"QkqMU54ZRoydrFc9CJqu2HJxJa4tfzs-WFjDt3hycBduvCnGMUTeSOxACauhwfsKtmvgdEG4mrPkax9V6GLowdr1DuftlcJKY0VChl-9n7sL5cu1sDEL5UeHuVbwqRpEADCg0Itfxs4oqyZTpxxgUtLYO2a41fvI19rFPWjnBEwULwnmRatFzbX7QEwY0mI1trZjuNtrnRJ3C6ABbv79it0ntOFKyZ24sNzDinj5JobcABO28D3P1cIoTjB0mStR","token_type":"bearer","expires_in":3599,"refresh_token":"q2RBDIRxLAziqpFAwUeZ2KkD7iXwXeb2KNuoh0SNVROt7-Bix4TP-7Gcs7haijDopxD2gmoIt83ucmwbE8a94co9kST4Tsv8F1Xrj00ew4UR0xn3yhMmn8Hnn8W7slXBrfnm7i9RoOXnis0xFUQ-5DXc0-UYTXoYZLVwoceWn_-vTU26V_sqNxcsXd2u6oxbbzruqPt3GVe1NnUt2l6nNHq76_v5eA-cTMYxIquBfoTvIpdVtAho8btoDTVSdc05X6-qPTUs7oPW_OGb3MxXBA"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:03:51 GMT
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/beta/bookings/7f54c9f5-63ba-415b-a53f-c929f48878ac
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer QkqMU54ZRoydrFc9CJqu2HJxJa4tfzs-WFjDt3hycBduvCnGMUTeSOxACauhwfsKtmvgdEG4mrPkax9V6GLowdr1DuftlcJKY0VChl-9n7sL5cu1sDEL5UeHuVbwqRpEADCg0Itfxs4oqyZTpxxgUtLYO2a41fvI19rFPWjnBEwULwnmRatFzbX7QEwY0mI1trZjuNtrnRJ3C6ABbv79it0ntOFKyZ24sNzDinj5JobcABO28D3P1cIoTjB0mStR
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:03:54 GMT
+      Content-Length:
+      - '478'
+    body:
+      encoding: UTF-8
+      string: '{"Id":"6d0a3b9b-966e-4203-9fbc-e9be1d6a2c2b","BookingId":"7f54c9f5-63ba-415b-a53f-c929f48878ac","Currency":826,"PaymentUrl":"","Paid":"2015-04-08T13:01:25.447","ReceiptItems":[{"ShipmentId":"e97c841a-2cdc-48be-b70d-1b8754181e3c","Cost":41.400,"Service":{"Id":"1f478ff2-15f6-4c13-9711-644fc26c362b","Name":"Express
+        Plus","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express
+        Plus","Information":"Express Plus","Routes":null},"Vat":true}]}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:03:56 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:39:18 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"AyoPADtXufh_n3djbT6FTzT4aQsgkPd5izqPhNWr72aWUulnYfUvG-Oq88Ura_zZXpx_14luQJStDXP-QxgUr6blv9XGhrA8IMJVkwfv6lJvYQ8Fj2XKj3yI5zfG8fgJu_Kzh4UMUKtADK8D2FDuaslvZSdn-N4s6v7wY7HbYFcDYH0WDM8zTDytymt77__krfBV7NEwW8rIdibLyB4-MqBJE6cdoNUt8ICetEH7AT7tdRNRXNS1FdB1sAOGAfdT","token_type":"bearer","expires_in":3599,"refresh_token":"ZXHlKVqwlrXstRGglqM4ubSVrKKhQNCMh9Fz1nTGRT7gZMBDMqtqBLzU0LkoYlxLo9Ie3-J4DuuozgsBChkcnFXSlJZnr4iD47jkCySQ6tdu_MiuHRb-Xg2BR6R4UeazBOYFlkIvmv0M8IAXPiVQvNqbXkKZT76L7yUsFiaBDbCeTpFCFK_kgx8URsqz8LJBoyo99oirBBRyUUp4HAnL1r5NKKYOwPBMNAKjVbIs71OZCm3BPJ2OFv4I7vu-oVIYmSLaZK9pucDJI-L00pvU_A"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:39:19 GMT
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/beta/quotes
+    body:
+      encoding: UTF-8
+      string: '{"Id":"10564051-9593-4d3b-80d5-913a6266e438","Currency":826,"Shipments":[{"Id":"2cec73bc-7173-498f-af5d-4620a8f4040d","Sender":{"Id":"ffb85091-7ef3-48d0-8741-cee47637c08b","Address":{"Id":"c9647115-f36a-4143-b09e-ae9e5c252f7e","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","Country":"GB","CountryIso":826,"City":"Albuquerque","PostalArea":"SA1
+        1DP"},"FirstName":"Werner","Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Recipient":{"Id":"c4c24e63-68b2-444c-8fb4-719e517891c4","Address":{"Id":"83c3ebeb-4454-4b5b-a3ad-9a2b87a148c6","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","Country":"GB","CountryIso":826,"City":"Albuquerque","PostalArea":"SA1
+        1DP"},"FirstName":"Werner","Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Parcels":[{"Id":"eee5b620-5ee0-4d7a-b8cf-a1e7fe549fd5","Weight":50,"Size":{"Height":38,"Length":27,"Width":21},"Value":123.0,"Currency":826}],"Collection":"2015-04-08T14:39:19+01:00","Insured":false,"Sandbox":true}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer AyoPADtXufh_n3djbT6FTzT4aQsgkPd5izqPhNWr72aWUulnYfUvG-Oq88Ura_zZXpx_14luQJStDXP-QxgUr6blv9XGhrA8IMJVkwfv6lJvYQ8Fj2XKj3yI5zfG8fgJu_Kzh4UMUKtADK8D2FDuaslvZSdn-N4s6v7wY7HbYFcDYH0WDM8zTDytymt77__krfBV7NEwW8rIdibLyB4-MqBJE6cdoNUt8ICetEH7AT7tdRNRXNS1FdB1sAOGAfdT
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:39:20 GMT
+      Content-Length:
+      - '2059'
+    body:
+      encoding: UTF-8
+      string: '{"Id":"60f59144-c76f-4640-9e0a-9b24c2e34892","QueryId":"10564051-9593-4d3b-80d5-913a6266e438","Currency":826,"QuoteShipments":[{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":22.380,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"20490977-9ddd-4de3-8aa7-a490a2268563","Name":"Express","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express","Information":"Express","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true},{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":41.400,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"1f478ff2-15f6-4c13-9711-644fc26c362b","Name":"Express
+        Plus","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express
+        Plus","Information":"Express Plus","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true},{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":9.230,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"9529f28a-b75c-4a24-8a73-650986b5d7c6","Name":"Standard","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Standard","Information":"Standard","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true},{"ShipmentId":"2cec73bc-7173-498f-af5d-4620a8f4040d","Cost":21.500,"Surcharge":0.000,"EarliestCollection":"2015-04-08T14:39:20.467","Service":{"Id":"bfd47c5a-79e1-4a3b-b5c0-798ff215dbdc","Name":"Express
+        Saver","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express
+        Saver","Information":"Express Saver","Routes":null},"Carrier":{"Id":"d5ec66cb-eb1d-476c-9e3d-44cf6738d154","Name":"UPS
+        Veeqo","Private":true,"Editable":false,"Services":null},"Vat":true}]}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:39:21 GMT
+recorded_with: VCR 2.9.3

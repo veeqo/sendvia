@@ -1,8 +1,10 @@
 require 'spec_helper'
 
-describe Sendvia::Carrier::Service, "countries", vcr: 'services/countries' do
-  let!(:session) { Sendvia::Session.new("ZDU3Y98sfE-F3hnPr4LcUgLkxfiPe6TKsl0YacnZAHVvuUWbLAdstwEwJ99CTIy4mS36j7tMANyol-g7-y40kOo3_RRa-IcO8Koz5EbJsXakNl59MOBIO85waS5P0ZAZu_UTNdPDm70_AbRCsSd1j5GxmYUrnReOdchLGQYZZmExk6JtPElU1tMjOiZLnCtKefj2PplQSz3_HV1eVRFYmBKJmhPXKXp-XWFhiA7P1haaUHvzQ9YfUqSmgdV4TA3b", true) }
-  let!(:service) { Sendvia::Carrier::Service.find("b42a0b50-0393-43cf-9499-4fe90ec020f7", params: { carrier_id: "de306a53-25c5-48b6-a722-e71a38afbf95" }) }
+describe Sendvia::Carrier::Service, "countries", vcr: { cassette_name: 'carrier_services/countries' } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
+  let!(:service) { Sendvia::Carrier::Service.find("1f478ff2-15f6-4c13-9711-644fc26c362b", params: { carrier_id: "1f478ff2-15f6-4c13-9711-644fc26c362b" }) }
 
   subject { service.countries }
 

@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 12:32:50 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"OAAQy623ZWEComz1IkvphsQQeWFRhYW7kclf-GUfYdhPGq4AL-oM54FIkoDp_1jspSc8inKyyrtwrBnlz6x9zPL9YjouqPCNruxYkkuAz2dxAjYvlDQD6SHsMLmloAUXOkuoKh2KGfTSqldgOQP_D2KavXPwD8ELxWNaSPA4ZUyFsk4Emc9gEoDfRqlFp9djuKncCSjegP5cpz7wBTj-OtaALQ4qQerTx0S3RF-6TQt7yffWcohNe36DZ0KcnWJK","token_type":"bearer","expires_in":3599,"refresh_token":"NLDZlEhNXAhuMhh1lJ_dC73TU3_DNlR7Px2gIrRdkUvriIMCH7j1sXF5OtSB-rMOW_z9K-D9vIvpHSzzExLhhLPKqcZnyOdQBgMsfHUfowrdJhd-M3weD4S9m-X8hYk6jfF4VYO_0EBzgpSNBLqfITdGzUEUPEbZTkkAth54Icdv_n4tHafEsvIYbSY47g1EyGjkUHJFLSfJ6tL9E_p-aiBN8d0yyu148Vo0eoZkBoVQiT4YNtRHKD-HtSXWm4E8FlFtlFJxrHAU5oonf1OtTA"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 12:32:52 GMT
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/beta/carriers
+    body:
+      encoding: UTF-8
+      string: '{"nonsense":"true"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer Q-1C_f1iard8mGq-7r1yDsBrJ58rpnTBbzL-7_skwXmWNP6mlWMn3SCDuDznJoKMax5YZEsklMCmfqI_Cm6IjcWst7Tfd4j1Rhe6MHk86Qk3O2RtWOFq22c8xVt_4xFtwgJ-z8jj2ik5GJSWxuMHRKH8zZjJyC0WSbQ1o0HwI83b4zFi_RBcibNwyy4JvZ_GzfUyKL01w3O1QhcKX3PKnwruVitvVX_w-f866s3LJZ_MI-sK5Y9lVcA-urMW-ZeJ
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 12:32:50 GMT
+      Content-Length:
+      - '136'
+    body:
+      encoding: UTF-8
+      string: '{"Message":"The request is invalid.","ModelState":{"carrier":["An error
+        has occurred."],"carrier.Name":["The Name field is required."]}}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 12:32:52 GMT
+recorded_with: VCR 2.9.3

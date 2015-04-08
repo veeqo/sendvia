@@ -1,8 +1,10 @@
 require "spec_helper"
 
-describe Sendvia::Carrier::Service, "#create", vcr: 'carrier_services/create' do
-  let!(:session) { Sendvia::Session.new("mX0do9pfLY23xINzIH45TKlQpQRjoBVi_SrxTf3YfVMUqpycJQYKuOY7W-6m1TC4_NCq2le7NjAcctbnaaqd32b4zQN_x6Fz0Viftv4ZbjKQUcSmkX_OvWDzezfISpsztTNscIjp-pjwNPBB2pEZpWLr7Dz-7t4foHJ1QR9I1Skn8AU2FcfgOFo7I1Vwar6V3E59abL6nKa78QHPFITjH52JFeB8biWLWDXtjuZ4xOyMvDhmlCoSvYmFkaLPeMKG", true) }
-  let!(:carrier) { Sendvia::Carrier.find("cae6d11a-9fde-4f66-a141-01a86ea8b0ea") }
+describe Sendvia::Carrier::Service, "#create", vcr: { cassette_name: 'carrier_services/create' } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
+  let!(:carrier) { Sendvia::Carrier.find("307a87a9-6cf2-4ba6-a59f-099babc020d5") }
   let(:carrier_service_attributes) do
     {
       carrier_id: carrier.Id,

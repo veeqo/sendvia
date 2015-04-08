@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:01:24 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"xXrUA3mo8aBAfdjfzMuhftELfuP7hE5G1nH3Tfwc5fG4WJU7A8QgKvzxMikR2GdHCQyWJ65TIo0lnKUMUCmlnoow_APeZEomvp55vqsI5igee7yuq4BgoJhxJvf95Irk7-RY0XnfGmIG57IWUpgfcntBz8HPEvAFxZKTOFZ8EDpoaSuDyCkINERv2Y2iiEzsgLTIUjWsBUPvL2ff-N-SvjcqX47mldCkha6sgaNcpVmyAJmWtLBSQOXzV0m5Ojny","token_type":"bearer","expires_in":3600,"refresh_token":"KBtRcF6nvclMG3uha5WAKQk0UKMc-zQW1kIWPONyLqy-jNko5VP90VjnaqLeWyFpNqSC9RVNDugFn5qWTYyvOJqXuA9VMolUVPmGKxl31wtD1D7ae6H2GtzMpwJCsP7hwBYd75uI-Lni9yUUvnr4-ikqaV6DPwZDvjNIFvVtQ2RyasV-LJGBTwY2admhFOKHXixAVz8DvyFgRYC93gUVjI8mSbKLfWrn1PXjQK6fb_baMXjM0Zs_VWIvkl3EEfP0t35tBXwkr1ztjht1A811Rg"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:01:26 GMT
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/beta/bookings
+    body:
+      encoding: UTF-8
+      string: '{"Id":"7f54c9f5-63ba-415b-a53f-c929f48878ac","Currency":826,"BookingShipments":[{"Shipment":{"Id":"e97c841a-2cdc-48be-b70d-1b8754181e3c","Sender":{"Id":"bc50cd8d-7c13-4c6c-aa2e-b5c85ae2deb2","Address":{"Id":"0fcebeb1-f353-49f7-b4d4-dcb3a10b58e8","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","Country":"GB","CountryIso":826,"City":"Albuquerque","PostalArea":"SA1
+        1DP"},"FirstName":"Werner","Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Recipient":{"Id":"20a0d479-0160-45ce-a98b-813f098c050f","Address":{"Id":"6ebe2b37-d7dc-4f7f-846b-1467617a1542","Company":"A1A","Department":"Distributing","Floor":"Basement","StreetNumber":"1","Country":"GB","CountryIso":826,"City":"Albuquerque","PostalArea":"SA1
+        1DP"},"FirstName":"Werner","Surname":"Heisenberg","PhoneNumber":"12323-121211","MobileNumber":"12323-23232","Email":"ww@a1a.com"},"Parcels":[{"Id":"e670dd8e-9141-43c2-a61e-f0cb17178a2b","Weight":357,"Size":{"Height":7,"Length":13,"Width":36},"Value":123.0,"Currency":826}],"Collection":"2015-04-08T14:01:26+01:00","Insured":false,"Sandbox":true},"ServiceId":"1f478ff2-15f6-4c13-9711-644fc26c362b"}],"PaymentMethod":"AccountCredit"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer xXrUA3mo8aBAfdjfzMuhftELfuP7hE5G1nH3Tfwc5fG4WJU7A8QgKvzxMikR2GdHCQyWJ65TIo0lnKUMUCmlnoow_APeZEomvp55vqsI5igee7yuq4BgoJhxJvf95Irk7-RY0XnfGmIG57IWUpgfcntBz8HPEvAFxZKTOFZ8EDpoaSuDyCkINERv2Y2iiEzsgLTIUjWsBUPvL2ff-N-SvjcqX47mldCkha6sgaNcpVmyAJmWtLBSQOXzV0m5Ojny
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 13:01:24 GMT
+      Content-Length:
+      - '483'
+    body:
+      encoding: UTF-8
+      string: '{"Id":"6d0a3b9b-966e-4203-9fbc-e9be1d6a2c2b","BookingId":"7f54c9f5-63ba-415b-a53f-c929f48878ac","Currency":826,"PaymentUrl":"","Paid":"2015-04-08T13:01:25.4447489Z","ReceiptItems":[{"ShipmentId":"e97c841a-2cdc-48be-b70d-1b8754181e3c","Cost":41.400,"Service":{"Id":"1f478ff2-15f6-4c13-9711-644fc26c362b","Name":"Express
+        Plus","Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":true,"Description":"Express
+        Plus","Information":"Express Plus","Routes":null},"Vat":true}]}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 13:01:26 GMT
+recorded_with: VCR 2.9.3

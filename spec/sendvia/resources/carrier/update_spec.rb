@@ -1,15 +1,16 @@
 require 'spec_helper'
 
-describe Sendvia::Carrier, "#update", vcr: "carriers/update" do
-  let!(:session) { Sendvia::Session.new("OE7x-0ILBBpV0SJ-1N8HKDTWDDIvHeWs2DPGIn7Nem9R0-t0N0FHGv7vwxKcp1qEZOtCs7DufpJPAgWGCAfNQkA3jGFxCnDZbkMSuutFKSi3iJ7v1ewC8Ph-c12HPen0x2CXyRqXNLxIUHO3M6m1h5IJScMOfJQvd-sIRRUB9zolhwWCu4RtRMBF6SLIRNhwfmc0wCx1rGsE-i2aoYgkkVm-C_wrBXkDtKqqupsmzqp9I1kwGE305LxrNK8uzZSz", true) }
-  let(:existing_carrier) { Sendvia::Carrier.find('20f5f813-30b1-4433-ad2c-b8a46edf5e23') }
+describe Sendvia::Carrier, "#update", vcr: { cassette_name: "carriers/update" } do
+  let(:client_id) { "CLIENT_ID" }
+  let(:client_secret) { "CLIENT_SECRET" }
+  let!(:session) { Sendvia::Session.new(client_id, client_secret, true) }
+  let(:existing_carrier) { Sendvia::Carrier.find('c16d9f5a-55f0-4c9f-b8ae-9b23cc766423') }
   let(:updated_carrier_params) { { name: "My Updated Carrier" } }
 
-  subject { Sendvia::Carrier.find('cae6d11a-9fde-4f66-a141-01a86ea8b0ea').update_attributes updated_carrier_params }
+  subject { Sendvia::Carrier.find('c16d9f5a-55f0-4c9f-b8ae-9b23cc766423').update_attributes updated_carrier_params }
 
   it 'should update the remote resource' do
-    pending "Sendvia are returning 405 error(Not Allowed), however docs say update is possible"
     subject
-    expect(Sendvia::Carrier.find("cae6d11a-9fde-4f66-a141-01a86ea8b0ea").Name).to eq(updated_carrier_params[:name])
+    expect(Sendvia::Carrier.find("c16d9f5a-55f0-4c9f-b8ae-9b23cc766423").Name).to eq(updated_carrier_params[:name])
   end
 end

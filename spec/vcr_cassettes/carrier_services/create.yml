@@ -1,0 +1,132 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://CLIENT_ID:CLIENT_SECRET@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 14:18:17 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"E_AYqgfIqmUYnUEOKcbL4hSS_Xp7tDjYD5puKKtAvSHik6fanEaObXDBPNJqpaLobQre5YQqaoI6Sy39OwK9yIReYm28DtSNH1pfzuaS1et1GIJ8p6scn-pmvGnmQUujGQVS7-Il5kaJ2Qq31gKOKBnuGcYe0Q4vVU_y_ApD3c9ZGaEYgrqibzE41HzM5137zejuSiQGS4EclsraBwj3nuqA-639xwppfI8UWSi8snO3Rb8hcLD3WjBJJbg5Yq8z","token_type":"bearer","expires_in":3599,"refresh_token":"c0i22dbjtI8BBYQK93iAp5pO1SWWcuVyMedhBlfaAu4qVlvFIGY6grCGWg2YPmBrf2yCXTKezBkawxYs0VHCTEELyXVpQQbfgULf1793X5cfKVpInIHh_TIVdq0rt2yQqrpztnGxrM2AfUoUQYtFB4-IEDkqKLExf3sCKQ985SmvdXc5cH66PhVE6hMxNQrQymtwxn3xBKCdEDn3bxz034jZZEb8YXZ88tLIZl3KQgOs5bwkQ25h_UE0lUgD7aIywoOor7ueWe7ueFEOfkXbGw"}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 14:18:18 GMT
+- request:
+    method: get
+    uri: https://www.sendvia.co.uk/rest/beta/carriers/307a87a9-6cf2-4ba6-a59f-099babc020d5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Authorization:
+      - Bearer 2ONQ6RrAb3Ac1yVYq89eC_CWRTHtJtOKaPnxbPW1fKNd_8EFcjKmgnqv8uwuNOWaSFS36LkVdXJmCEL1zeZSnBa-XSipn7fcW3l0rx1wIGkeWdebAP3DcraKoz13qBOk6ZdBW3M_ErlTwA3TbxdGHPwwzvppYa9ZQsKBxhBC-vAeo7YI5_aPjuLIM3UnJ-ISyfdUC_Lr7x26xl3-P5ReWsk7BJALAJgma6YfDx_pQ9TQfq4WUpQdv-nJ1xbQ5u6q
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 14:18:17 GMT
+      Content-Length:
+      - '116'
+    body:
+      encoding: UTF-8
+      string: '{"Id":"307a87a9-6cf2-4ba6-a59f-099babc020d5","Name":"MY NEW CARRIER","Private":true,"Editable":true,"Services":null}'
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 14:18:18 GMT
+- request:
+    method: post
+    uri: https://www.sendvia.co.uk/rest/beta/carriers/307a87a9-6cf2-4ba6-a59f-099babc020d5/services
+    body:
+      encoding: UTF-8
+      string: '{"Name":"MY AWESOME NEW SERVICE","Private":false,"Transport":"Road","Tracked":true,"Volumetric":false,"PrintLabels":false,"Description":"My
+        New Service for my carrier","Information":"A wonderful revolutionary tracked
+        service"}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer 2ONQ6RrAb3Ac1yVYq89eC_CWRTHtJtOKaPnxbPW1fKNd_8EFcjKmgnqv8uwuNOWaSFS36LkVdXJmCEL1zeZSnBa-XSipn7fcW3l0rx1wIGkeWdebAP3DcraKoz13qBOk6ZdBW3M_ErlTwA3TbxdGHPwwzvppYa9ZQsKBxhBC-vAeo7YI5_aPjuLIM3UnJ-ISyfdUC_Lr7x26xl3-P5ReWsk7BJALAJgma6YfDx_pQ9TQfq4WUpQdv-nJ1xbQ5u6q
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 08 Apr 2015 14:18:23 GMT
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 08 Apr 2015 14:18:24 GMT
+recorded_with: VCR 2.9.3

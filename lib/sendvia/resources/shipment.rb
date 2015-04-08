@@ -7,7 +7,7 @@ module Sendvia
     end
 
     def self.labels shipment_ids
-      labels_response_body = post(:labels, {}, shipment_ids).body
+      labels_response_body = post(:labels, {}, { shipmentIds: shipment_ids.to_s }).body
       Base64.decode64(ActiveSupport::JSON.decode(labels_response_body)["Data"])
     end
 
