@@ -1,15 +1,15 @@
 module Sendvia
   class Base < ActiveResource::Base
-    self.include_format_in_path = false
-    self.include_root_in_json = false
-    self.primary_key = :Id
-
     BASE_API_ENDPOINT = 'https://www.sendvia.co.uk/'
     API_VERSION = 'beta'
     REST_API_ENDPOINT = "#{BASE_API_ENDPOINT}rest/#{API_VERSION}/"
 
+    self.include_format_in_path = false
+    self.include_root_in_json = false
+    self.primary_key = :Id
+    self.site = REST_API_ENDPOINT
+
     def self.activate_session session
-      self.site = REST_API_ENDPOINT
       self.headers.merge! 'authorization' => "Bearer #{session.access_token}"
     end
 

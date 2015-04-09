@@ -12,8 +12,8 @@ describe Sendvia::Base, "activate_session" do
 
   subject { Sendvia::Base.activate_session(session) }
 
-  it 'should set the base site for REST API' do
-    expect { subject }.to change { Sendvia::Base.site.to_s }.to('https://www.sendvia.co.uk/rest/beta/')
+  it 'should not alter the base site for REST API' do
+    expect { subject }.to_not change { Sendvia::Base.site.to_s }
   end
 
   it 'should set the authorization header with the value of the access token' do
