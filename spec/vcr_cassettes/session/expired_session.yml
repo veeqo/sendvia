@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://24457b6f-7088-42af-8b0c-9e8326e0dba2:G3QFTOB0Y9JFAW36QHZV361T7Q75R3NW9XQO5H5DFKJTB2K254JD5Z8JC6HCQFJ4WXGNFOAJMVPTWHSFGF9WTK0JYHM992W9AP7OW7WQ3A0JJPW4OC6LGWLL66Y8CBJT8QTHKDTISS3STQ9IURU75L3NDVSZIYO11GK36PUKSX2X322P6POUQLYXWFDYV3A4EC1MFGME7JOITFUL3C32K3KPSXH0L5ZZX8T1BPK0DJWG6QDQV24TAHTK1L3R8V3@www.sendvia.co.uk/beta/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '612'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Expires:
+      - "-1"
+      Server:
+      - Microsoft-IIS/8.0
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Fri, 10 Apr 2015 09:59:14 GMT
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"tM_cqBp4iJZ3HVs_mmcTIdplfKro1vsBuMItrtXio6NDPV6pVu0q9vXdpu8GNRO5kh9T08orOMrQFHot-qRm4QsNkYNQi7_EjXxQyuec2bemm0IZbhswvp7XfcFwFo1h4sLhXmttmfK4NsIRSK9x2hxtydeuX9-yNmtSS5ORW-QExzyn3caNFALnC86bHGya6W4iyt-aS8rRPIDcruhoh9ZecVQEOO8KJv-A90p76lx08BL0kGzBkXFgd26z-jLy","token_type":"bearer","expires_in":3599,"refresh_token":"GfvcPXhvAaPFg6QYb4mGZsZfeggRHLPNJ-EN2eP31kZQWFvAM5dY59p977m-9lZZdcr36R6-QB8jwANbPW69Ez7BGNpYoBavkWd5kVGYL09lIn_OZbZ0UlbVA2WKvihPp5-3ZOXvbMcUq7Pmwm0TnQDtUzCvtdC7cNv5fNxMIdFNVM9QHC4j7YFBbQ39P95LfZJ_VSVrQBW8VnOnjo1ek7is_F3OhteNC2hXM8JIlBaJnH7wwQH3epJ2I5U8Sje9VoMz6HOHR0r2y_ZXD3bPTA"}'
+    http_version: 
+  recorded_at: Fri, 10 Apr 2015 09:59:14 GMT
+recorded_with: VCR 2.9.3
