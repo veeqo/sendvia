@@ -31,12 +31,6 @@ module Sendvia
       end
     end
 
-    def self.headers
-      super.delete('authorization')
-      super.merge! 'authorization' => "Bearer #{session.access_token}" if session.present?
-      super
-    end
-
     def self.session=(session)
       Thread.current["active.resource.session.#{self.object_id}"] = session
     end
