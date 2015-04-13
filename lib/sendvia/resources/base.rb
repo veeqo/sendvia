@@ -10,11 +10,11 @@ module Sendvia
     self.site = REST_API_ENDPOINT
 
     def self.activate_session session
-      self.headers.merge! 'authorization' => "Bearer #{session.access_token}"
+      self.session = session
     end
 
     def self.clear_session!
-      self.headers.delete('authorization')
+      self.session = nil
     end
 
     def self.create_with_url_params(attributes = {}, params = {})
@@ -24,6 +24,20 @@ module Sendvia
         resource.save
         resource.prefix_options = old_prefix_options
       end
+    end
+
+    def self.headers
+      super.delete('authorization')
+      super.merge! 'authorization' => "Bearer #{session.access_token}" if session.present?
+      super
+    end
+
+    def self.session=(session)
+      Thread.current["active.resource.session.#{self.object_id}"] = session
+    end
+
+    def self.session
+      Thread.current["active.resource.session.#{self.object_id}"]
     end
 
     private
